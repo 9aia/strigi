@@ -1,11 +1,11 @@
 # Strigi - CLI Command Assistant
 
 > [!TIP]
-> In a hurry to get started? Jump right to the [Installation](https://neogaialab.github.io/strigi/guide/installation.html#package-manager) to set up Strigi on your system.
+> In a hurry to get started? Jump right to the [Installation](https://9aia.github.io/strigi/guide/installation.html#package-manager) to set up Strigi on your system.
 
 Strigi is an open-source AI assistant designed to streamline command line interactions directly within your terminal. With Strigi, you can generate commands from natural language instructions and receive clear explanations for existing commands, making the command line more accessible for users of all levels.
 
-<img src="https://raw.githubusercontent.com/neogaialab/strigi/main/docs/public/demo.gif" alt="Strigi in action"/>
+<img src="https://raw.githubusercontent.com/9aia/strigi/main/docs/public/demo.gif" alt="Strigi in action"/>
 
 > [!WARNING]
 > ⚗️ Experimental - Strigi is under development and utilizes experimental AI technology. While it strives to provide accurate and helpful assistance, its responses may not always be perfect.
@@ -22,10 +22,10 @@ Or with other package managers like PNPM, Yarn, or Bun!
 
 ## Documentation
 
-- [Guide > Authentication](https://neogaialab.github.io/strigi/guide/authentication.html)
-- [Guide > Configuration](https://neogaialab.github.io/strigi/guide/configuration.html)
-- [Homepage](https://neogaialab.github.io/strigi/)
-- [CLI Reference](https://neogaialab.github.io/strigi/reference/cli.html)
+- [Guide > Authentication](https://9aia.github.io/strigi/guide/authentication.html)
+- [Guide > Configuration](https://9aia.github.io/strigi/guide/configuration.html)
+- [Homepage](https://9aia.github.io/strigi/)
+- [CLI Reference](https://9aia.github.io/strigi/reference/cli.html)
 
 ## Contribute
 

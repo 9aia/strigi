@@ -11,7 +11,7 @@ hero:
       link: /about/introduction
     - theme: alt
       text: GitHub
-      link: https://github.com/neogaialab/strigi
+      link: https://github.com/9aia/strigi
 
 features:
   - title: Describe

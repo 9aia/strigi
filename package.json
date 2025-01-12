@@ -5,13 +5,13 @@
   "description": "CLI command assistant leveraging GenAI to generate and explain commands using natural language.",
   "author": "Luis Emidio",
   "license": "MIT",
-  "homepage": "https://neogaialab.github.io/strigi",
+  "homepage": "https://9aia.github.io/strigi",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neogaialab/strigi.git"
+    "url": "git+https://github.com/9aia/strigi.git"
   },
   "bugs": {
-    "url": "https://github.com/neogaialab/strigi/issues"
+    "url": "https://github.com/9aia/strigi/issues"
   },
   "keywords": [
     "cli",

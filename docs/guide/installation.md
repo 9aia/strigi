@@ -38,7 +38,7 @@ For advanced users who prefer manual installation, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/neogaialab/strigi
+   git clone https://github.com/9aia/strigi
    ```
 
 2. **Change Directory and Install Dependencies:**

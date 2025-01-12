@@ -1,1 +1,3 @@
 # TODO
+
+- Inform `xsel` need
