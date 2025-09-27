@@ -13,7 +13,7 @@ export default defineConfig({
         text: "About",
         items: [
           { text: "Introduction", link: "/about/introduction" },
-          { text: "Changelog", link: "https://github.com/9aia/strigi/blob/main/CHANGELOG.md" },
+          { text: "Changelog", link: "https://github.com/9aia/strigi/blob/main/pm/CHANGELOG.md" },
           { text: "Roadmap", link: "https://github.com/9aia/strigi/blob/main/CONTRIBUTING.md#project-management" },
           { text: "Contributing Guide", link: "https://github.com/9aia/strigi/blob/main/CONTRIBUTING.md" },
         ],
