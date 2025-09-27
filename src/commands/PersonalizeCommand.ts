@@ -5,14 +5,14 @@ import { config, saveConfig } from "../config"
 import StrigiCommand from "../lib/StrigiCommand"
 import { getAvailableModels } from "../lib/gemini"
 
-export default class InstructCommand extends StrigiCommand {
+export default class PersonalizeCommand extends StrigiCommand {
   static usage = Command.Usage({
-    description: "Add custom instructions for tailored responses.",
-    details: `The \`s instruct\` command empowers you to provide specific guidelines or preferences to the model for more tailored and accurate responses. Your custom instructions will be integrated into future interactions with the model.`,
+    description: "Personalize your AI experience with model preferences and custom instructions.",
+    details: `The \`s personalize\` command allows you to customize your AI experience by selecting your preferred Gemini model and providing personal instructions for more tailored and accurate responses. Your personalization settings will be used in all future interactions with the model.`,
     category: "Configuration",
   })
 
-  static paths = [["instruct"], ["i"]]
+  static paths = [["personalize"], ["p"]]
 
   async execute() {
     let contentModels;
@@ -49,11 +49,11 @@ export default class InstructCommand extends StrigiCommand {
       config.model = model
 
       await saveConfig()
-      this.context.stdout.write(c`{green Configuration set successfully!}\n`)
+      this.context.stdout.write(c`{green Personalization settings saved successfully!}\n`)
     }
     catch (_e) {
       const e = _e as Error
-      this.context.stdout.write(c`{red Error saving configuration:}\n\n${e.message}\n`)
+      this.context.stdout.write(c`{red Error saving personalization settings:}\n\n${e.message}\n`)
     }
   }
 }

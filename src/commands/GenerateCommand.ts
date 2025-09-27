@@ -13,6 +13,7 @@ export default class GenerateCommand extends GenerativeCommand {
       ["Generate and execute a command to list files.", "s generate \"list files in current directory\""],
       ["Generate and execute a command to update packages.", "s generate \"update all packages\""],
     ],
+    category: "Assistance",
   })
 
   static paths = [["generate"], ["g"]]

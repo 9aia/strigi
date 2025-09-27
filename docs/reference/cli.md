@@ -177,20 +177,20 @@ Start a command revision.
   $ s revise -m gemini-2.5-flash-lite "git log"
   ```
 
-## `instruct` <Badge type="info" text="subcommand" />
+## `personalize` <Badge type="info" text="subcommand" />
 
-Add custom instructions for tailored responses.
+Personalize your AI experience with model preferences and custom instructions.
 
 - Usage
 
   ```bash
-  $ s instruct
+  $ s personalize
   ```
 
   ```bash
-  $ s i
+  $ s p
   ```
 
 - Details
 
-  The `s instruct` command empowers you to provide specific guidelines or preferences to the model for more tailored and accurate responses. Your custom instructions will be integrated into future interactions with the model.
+  The `s personalize` command allows you to customize your AI experience by selecting your preferred Gemini model and providing personal instructions for more tailored and accurate responses. Your personalization settings will be used in all future interactions with Strigi.

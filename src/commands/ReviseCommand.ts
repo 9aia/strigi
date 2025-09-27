@@ -9,6 +9,7 @@ export default class ReviseCommand extends GenerativeCommand {
       ["Start a revision for the `ls` command.", "s revise \"ls\""],
       ["Start a revision for the `git log` command.", "s revise \"git log\""],
     ],
+    category: "Assistance",
   })
 
   static paths = [["revise"], ["r"]]

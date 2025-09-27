@@ -9,6 +9,7 @@ export default class ExplainCommand extends GenerativeCommand {
       ["Get an explanation for the `ls` command.", "s explain \"ls\""],
       ["Get an explanation for the `git status` command.", "s explain \"git status\""],
     ],
+    category: "Assistance",
   })
 
   static paths = [["explain"], ["e"]]
