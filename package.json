@@ -29,9 +29,9 @@
     "s": "./dist/s"
   },
   "files": [
-    "CHANGELOG.md",
     "CONTRIBUTING.md",
-    "dist"
+    "dist",
+    "pm/CHANGELOG.md"
   ],
   "scripts": {
     "start": "bun .",
