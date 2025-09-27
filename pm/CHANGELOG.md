@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added a new `config` command to display current settings, including API key status, selected model, custom instructions, and configuration file location
+  - Included an option to reveal your API key when using the `config` command
+- Added a new `personalize` command to customize your AI experience by selecting your preferred Gemini model and setting custom instructions
+- Introduced a new `help` command for easily accessing help information
+- Added a `--model` option to `generate`, `explain`, and `revise` commands, allowing you to specify a Gemini model directly for specific tasks
+
+### Removed
+
+- Removed the `instruct` command, as its functionality was integrated and enhanced within the new `personalize` command
+
+### Changed
+
+- Updated the default Gemini model for new configurations to `gemini-2.5-flash`
+- Migrated project repository, homepage, and bug report links to the new `9aia` organization
+
 ## [0.4.1] - 2024-11-18
 
 ### Fixed
