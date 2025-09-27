@@ -1,7 +1,7 @@
 import { Command, Option } from "clipanion"
 import { confirm } from "@inquirer/prompts"
 import c from "chalk-template"
-import { config, CONFIG_PATH } from "../config"
+import { CONFIG_PATH, config } from "../config"
 import StrigiCommand from "../lib/StrigiCommand"
 
 export default class ConfigCommand extends StrigiCommand {
@@ -59,7 +59,8 @@ export default class ConfigCommand extends StrigiCommand {
 
       this.context.stdout.write(c`- About Me: {yellow ${aboutMe}}\n`)
       this.context.stdout.write(c`- Response Preference: {yellow ${responsePreference}}\n`)
-    } else {
+    }
+    else {
       this.context.stdout.write(c`\nCustom Instructions: {gray Not configured}\n`)
     }
   }

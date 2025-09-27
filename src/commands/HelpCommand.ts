@@ -3,7 +3,7 @@ import StrigiCommand from "../lib/StrigiCommand"
 
 export default class HelpCommand extends StrigiCommand {
   static paths = [["help"]]
-  
+
   static usage = Command.Usage({
     description: "Show help information",
     details: "Display help information for the Strigi CLI tool.",

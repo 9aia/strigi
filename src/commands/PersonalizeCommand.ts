@@ -15,10 +15,10 @@ export default class PersonalizeCommand extends StrigiCommand {
   static paths = [["personalize"], ["p"]]
 
   async execute() {
-    let contentModels;
+    let contentModels
 
     try {
-      contentModels = await getAvailableModels();
+      contentModels = await getAvailableModels()
     }
     catch (error: any) {
       this.context.stdout.write(c`{red Error getting available models:}\n\n${error.message}\n`)
