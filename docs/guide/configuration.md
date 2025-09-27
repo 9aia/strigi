@@ -2,6 +2,52 @@
 
 Strigi is designed to work out of the box without requiring configuration. However, for curated Strigi's behavior, there are a few configuration options available.
 
+## Changing the AI Model
+
+Strigi uses Google's Gemini models for generating commands and explanations. You can change the model in several ways:
+
+### Method 1: Using the Personalize Command (Recommended)
+
+The easiest way to change your default model is through the personalize command:
+
+```bash
+$ s personalize
+```
+
+When prompted with "Which model would you like to use?", select your preferred model from the available options. This will set your default model for all future interactions.
+
+### Method 2: Using the Model Flag (Temporary)
+
+You can specify a different model for a single command using the `-m` or `--model` flag:
+
+```bash
+# Use a specific model for one command
+$ s -m gemini-2.5-flash-lite "list files in current directory"
+
+# Or with any subcommand
+$ s generate -m gemini-2.5-flash-lite "update packages"
+$ s explain -m gemini-2.5-flash-lite "git status"
+$ s revise -m gemini-2.5-flash-lite "ls -la"
+```
+
+### Available Models
+
+Strigi automatically fetches the latest available models from Google's API. Common models include:
+
+- `gemini-2.5-flash` (default) - Fast and efficient for most tasks
+- `gemini-2.5-flash-lite` - Even faster, good for simple commands
+- `gemini-2.5-pro` - More capable for complex reasoning
+
+To see all available models, run the personalize command and browse the selection menu.
+
+### Model Selection Tips
+
+- **For speed**: Choose `gemini-2.5-flash-lite` for quick command generation
+- **For accuracy**: Use `gemini-2.5-flash` (default) for balanced performance
+- **For complexity**: Select `gemini-2.5-pro` for advanced tasks
+
+Your model preference is saved in your configuration and will be used for all future commands unless you override it with the `-m` flag.
+
 ## Providing General Contextual Instructions
 
 Strigi strives to be adaptable, and you can leverage the `s personalize` command to provide specific instructions or preferences that influence its responses.
