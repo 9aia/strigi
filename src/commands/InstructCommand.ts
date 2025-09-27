@@ -1,9 +1,9 @@
-import { input } from "@inquirer/prompts"
+import { input, select } from "@inquirer/prompts"
 import c from "chalk-template"
 import { Command } from "clipanion"
 import { config, saveConfig } from "../config"
-import type { CustomInstructions } from "../types"
 import StrigiCommand from "../lib/StrigiCommand"
+import { getAvailableModels } from "../lib/gemini"
 
 export default class InstructCommand extends StrigiCommand {
   static usage = Command.Usage({
@@ -14,19 +14,23 @@ export default class InstructCommand extends StrigiCommand {
 
   static paths = [["instruct"], ["i"]]
 
-  async saveCustomInstructions(ci: CustomInstructions) {
-    try {
-      config.customInstructions = ci
-      await saveConfig()
-      this.context.stdout.write(c`{green Custom instructions set successfully!}\n`)
-    }
-    catch (_e) {
-      const e = _e as Error
-      this.context.stdout.write(c`{red Error saving custom instructions:}\n\n${e.message}\n`)
-    }
-  }
-
   async execute() {
+    let contentModels;
+
+    try {
+      contentModels = await getAvailableModels();
+    }
+    catch (error: any) {
+      this.context.stdout.write(c`{red Error getting available models:}\n\n${error.message}\n`)
+      return
+    }
+
+    const model = await select<string>({
+      message: "Which model would you like to use?",
+      choices: contentModels.map((model: any) => ({ name: model.name, value: model.name })),
+      default: config.model || "gemini-2.5-flash",
+    })
+
     const aboutMe = await input({
       message: "What would you like the model to know about you to provide better responses?",
       default: config.customInstructions?.aboutMe,
@@ -37,9 +41,19 @@ export default class InstructCommand extends StrigiCommand {
       default: config.customInstructions?.responsePreference,
     })
 
-    this.saveCustomInstructions({
-      aboutMe,
-      responsePreference,
-    })
+    try {
+      config.customInstructions = {
+        aboutMe,
+        responsePreference,
+      }
+      config.model = model
+
+      await saveConfig()
+      this.context.stdout.write(c`{green Configuration set successfully!}\n`)
+    }
+    catch (_e) {
+      const e = _e as Error
+      this.context.stdout.write(c`{red Error saving configuration:}\n\n${e.message}\n`)
+    }
   }
 }
