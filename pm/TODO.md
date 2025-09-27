@@ -7,3 +7,5 @@
 
 - Install tarsi
 - Change instruct command name
+
+- Refactor config access (resolve it to default, avoiding undefined config)

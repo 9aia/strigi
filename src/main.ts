@@ -2,6 +2,7 @@ import process from "node:process"
 import { Builtins, Cli } from "clipanion"
 import pkg from "../package.json"
 import AuthCommand from "./commands/AuthCommand"
+import ConfigCommand from "./commands/ConfigCommand"
 import ExplainCommand from "./commands/ExplainCommand"
 import GenerateCommand from "./commands/GenerateCommand"
 import PersonalizeCommand from "./commands/PersonalizeCommand"
@@ -31,5 +32,6 @@ cli.register(GenerateCommand)
 cli.register(AuthCommand)
 cli.register(LogoutCommand)
 cli.register(PersonalizeCommand)
+cli.register(ConfigCommand)
 cli.register(MainCommand)
 cli.runExit(process.argv.slice(2))

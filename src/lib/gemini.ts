@@ -32,9 +32,9 @@ export async function getAvailableModels() {
   const data: any = await response.json();
   
   // Filter for models that support 'generateContent'
-  const contentModels = data.models.filter((m: any) => 
-      m.supportedGenerationMethods.includes('generateContent')
-  );
+  const contentModels = data.models.filter((m: any) => {
+    return m.supportedGenerationMethods.includes('generateContent') || m.supportedGenerationMethods.includes('batchGenerateContent')
+  });
 
   return contentModels.map((m: any) => ({
     name: m.name.replace("models/", ""),

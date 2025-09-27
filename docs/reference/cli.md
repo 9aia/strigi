@@ -194,3 +194,46 @@ Personalize your AI experience with model preferences and custom instructions.
 - Details
 
   The `s personalize` command allows you to customize your AI experience by selecting your preferred Gemini model and providing personal instructions for more tailored and accurate responses. Your personalization settings will be used in all future interactions with Strigi.
+
+## `config` <Badge type="info" text="subcommand" />
+
+Display the current configuration settings.
+
+- Usage
+
+  ```bash
+  $ s config
+  ```
+
+  ```bash
+  $ s c
+  ```
+
+- Options
+  - **-r, --reveal**: (optional) Reveal the API key in the output (requires confirmation for security)
+
+- Details
+
+  The `s config` command displays the current configuration settings including the Gemini API key status, model, and custom instructions. This is useful for verifying your current setup and troubleshooting configuration issues.
+
+- Examples
+
+  Display current configuration:
+
+  ```bash
+  $ s config
+  ```
+
+  Display configuration with API key revealed:
+
+  ```bash
+  $ s config --reveal
+  ```
+
+  When using `--reveal`, you'll be prompted to confirm before the API key is displayed for security reasons.
+
+  The command will show:
+  - **API Key Status**: Whether the Gemini API key is set (without revealing the actual key unless `--reveal` is used and confirmed)
+  - **Model**: The currently configured Gemini model (defaults to "gemini-2.5-flash")
+  - **Custom Instructions**: Your personalized "About Me" and "Response Preference" settings (shows "Not configured" if not set)
+  - **Config File Path**: The full path to your configuration file (typically `~/.config/strigi/config.json`)

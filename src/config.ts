@@ -7,9 +7,9 @@ export const DEFAULT_CONFIG: Config = {
   model: "gemini-2.5-flash",
 }
 
-const configDirPath = Bun.env.S_CONFIG_DIR_PATH || join(os.homedir(), "./.config/strigi")
-const configPath = join(configDirPath, "config.json")
-const file = Bun.file(configPath)
+export const CONFIG_DIR_PATH = Bun.env.S_CONFIG_DIR_PATH || join(os.homedir(), "./.config/strigi")
+export const CONFIG_PATH = join(CONFIG_DIR_PATH, "config.json")
+const file = Bun.file(CONFIG_PATH)
 
 // eslint-disable-next-line import/no-mutable-exports
 export let config = DEFAULT_CONFIG
@@ -20,5 +20,5 @@ export async function initConfig() {
 }
 
 export async function saveConfig() {
-  await Bun.write(configPath, JSON.stringify(config, null, 2))
+  await Bun.write(CONFIG_PATH, JSON.stringify(config, null, 2))
 }
