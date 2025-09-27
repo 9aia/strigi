@@ -5,6 +5,7 @@ import AuthCommand from "./commands/AuthCommand"
 import ConfigCommand from "./commands/ConfigCommand"
 import ExplainCommand from "./commands/ExplainCommand"
 import GenerateCommand from "./commands/GenerateCommand"
+import HelpCommand from "./commands/HelpCommand"
 import PersonalizeCommand from "./commands/PersonalizeCommand"
 import LogoutCommand from "./commands/LogoutCommand"
 import MainCommand from "./commands/MainCommand"
@@ -24,8 +25,6 @@ const cli = new Cli({
   binaryLabel: "Strigi",
   binaryVersion: pkg.version,
 })
-cli.register(Builtins.HelpCommand)
-cli.register(Builtins.VersionCommand)
 cli.register(ExplainCommand)
 cli.register(ReviseCommand)
 cli.register(GenerateCommand)
@@ -34,4 +33,7 @@ cli.register(LogoutCommand)
 cli.register(PersonalizeCommand)
 cli.register(ConfigCommand)
 cli.register(MainCommand)
+cli.register(HelpCommand)
+cli.register(Builtins.HelpCommand)
+cli.register(Builtins.VersionCommand)
 cli.runExit(process.argv.slice(2))

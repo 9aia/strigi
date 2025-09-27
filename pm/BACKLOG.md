@@ -12,9 +12,11 @@
 - Add revise and explain after errors
 - Add command highlighting
 - Add explanation highlighting
-- Add i18n
 - Add arg/config to disable streaming
 - Add arg/config for other models
+- Add credentials to env var. Export S_GEMINI_API_KEY = ""
+- Add support for other models not just Gemini
+- Add i18n
 
 ## Bugs
 
@@ -33,5 +35,9 @@
 ## Legal
 
 ## DX
+
+- Refactor config access (resolve it to default, avoiding undefined config)
+
+## QA
 
 - Add tests
