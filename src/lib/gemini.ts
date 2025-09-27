@@ -1,9 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
-import { config } from "../config"
+import { config, DEFAULT_CONFIG } from "../config"
 
 let genAI: GoogleGenerativeAI
 
-export function getGemini(systemInstruction?: string) {
+export function getGemini(systemInstruction?: string, modelName?: string) {
   if (!genAI) {
     const GEMINI_API_KEY = config.geminiApiKey || Bun.env.S_GEMINI_API_KEY
 
@@ -14,7 +14,7 @@ export function getGemini(systemInstruction?: string) {
   }
 
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: modelName || config.model || DEFAULT_CONFIG.model!,
     systemInstruction,
   })
 

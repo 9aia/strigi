@@ -1,5 +1,6 @@
 export interface Config {
   geminiApiKey: string | null | undefined
+  model?: string
   customInstructions?: CustomInstructions
 }
 

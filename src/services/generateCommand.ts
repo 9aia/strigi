@@ -5,6 +5,7 @@ import type { CustomInstructions } from "../types"
 export async function generateCommand(
   query: string,
   ci?: CustomInstructions,
+  model?: string,
 ) {
   const systemInstruction = `You are a CLI command generator. You receive a query and respond with a valid CLI command based on that query and user information. Don't give an explanation for the command.
 
@@ -15,7 +16,7 @@ Your response must be plain text. For example:
 git commit --amend
   `
 
-  const gemini = getGemini(systemInstruction)
+  const gemini = getGemini(systemInstruction, model)
 
   let prompt = ``
 

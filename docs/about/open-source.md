@@ -4,7 +4,7 @@ This page not only lists all the dependencies used in Strigi, both for developme
 
 ## Production Dependencies:
 
-- @google/generative-ai (^0.3.1)
+- @google/generative-ai (^0.21.0)
   - License: Apache-2.0
   - Repository: https://github.com/google/generative-ai-js
 - @inquirer/prompts (^4.3.1)
@@ -30,7 +30,7 @@ This page not only lists all the dependencies used in Strigi, both for developme
 
 - @antfu/eslint-config (^2.12.1)
   - License: MIT
-  - Repository: https://www.npmjs.com/package/@antfu/eslint-config
+  - Repository: https://github.com/antfu/eslint-config
 - @release-it/keep-a-changelog (^5.0.0)
   - License: MIT
   - Repository: https://github.com/release-it/keep-a-changelog

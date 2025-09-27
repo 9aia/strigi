@@ -4,6 +4,7 @@ import type { Config } from "./types"
 
 export const DEFAULT_CONFIG: Config = {
   geminiApiKey: null,
+  model: "gemini-2.5-flash",
 }
 
 const configDirPath = Bun.env.S_CONFIG_DIR_PATH || join(os.homedir(), "./.config/strigi")

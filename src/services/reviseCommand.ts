@@ -7,6 +7,7 @@ export async function reviseCommandStream(
   cmd: string,
   revise: string,
   ci?: CustomInstructions,
+  model?: string,
 ) {
   let systemInstructions = `You are a CLI command generator. You are expected to revise a command that you have generated based on user query and user's information, but now with a new input (Revise Prompt). Don't give an explanation for the command.
 
@@ -46,7 +47,7 @@ OS Platform: ${process.platform}
     ${revise}
   `
 
-  const gemini = getGemini(systemInstructions)
+  const gemini = getGemini(systemInstructions, model)
   const result = await gemini.generateContentStream(prompt)
   return result
 }

@@ -27,7 +27,7 @@ export default class GenerateCommand extends GenerativeCommand {
     const ci = config.customInstructions
 
     this.tryAsync(async (spinner) => {
-      const result = await generateCommand(query, ci)
+      const result = await generateCommand(query, ci, this.model)
       spinner.stop()
 
       const cmd = await this.writeStream(result.stream, chunk => chalk.cyan(chunk))

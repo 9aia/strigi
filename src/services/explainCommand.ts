@@ -5,6 +5,7 @@ import type { CustomInstructions } from "../types"
 export async function explainCommandStream(
   cmd: string,
   ci?: CustomInstructions,
+  model?: string,
 ) {
   let systemInstructions = `
     You are a CLI command generator. You are expected to explain a command based on user's query and information. Additionally, you should adapt your explanation based on the user's response preference.
@@ -37,7 +38,7 @@ export async function explainCommandStream(
     `
   }
 
-  const gemini = getGemini(systemInstructions)
+  const gemini = getGemini(systemInstructions, model)
 
   const prompt = `
   ## Command

@@ -13,6 +13,7 @@ Get CLI command assistance based on a prompt.
 - Options
   - **-e, --explain**: (optional) Get an explanation for a command directly.
   - **-r, --revise**: (optional) Revise a command directly.
+  - **-m, --model**: (optional) Gemini model to use (e.g., gemini-2.5-flash, gemini-2.5-flash-lite).
   - **-v, --version**: (optional) Get the Strigi version.
   - **-h, --help**: (optional) Get help.
 
@@ -26,6 +27,12 @@ Get CLI command assistance based on a prompt.
 
   ```bash
   $ s "how to list JSON files"
+  ```
+
+  Generate a command using a specific model:
+
+  ```bash
+  $ s -m gemini-2.5-flash-lite "list files in current directory"
   ```
 
   Get an explanation for the `git status` command:
@@ -79,6 +86,9 @@ Generate and execute commands from natural language prompts.
   $ s g <prompt> ...
   ```
 
+- Options
+  - **-m, --model**: (optional) Gemini model to use (e.g., gemini-2.5-flash, gemini-2.5-flash-lite).
+
 - Details
 
   The `s generate` command is designed to interpret natural language prompts and generate corresponding CLI commands. It then offers the option to revise the generated command before execution.
@@ -91,10 +101,10 @@ Generate and execute commands from natural language prompts.
   $ s generate "list files in current directory"
   ```
 
-  Get an explanation for the `git status` command:
+  Generate a command using a specific model:
 
   ```bash
-  $ s generate "update all packages"
+  $ s generate -m gemini-2.5-flash-lite "update all packages"
   ```
 
 ## `explain` <Badge type="info" text="subcommand" />
@@ -111,6 +121,9 @@ Get an explanation for a command.
   $ s e <command>
   ```
 
+- Options
+  - **-m, --model**: (optional) Gemini model to use (e.g., gemini-2.5-flash, gemini-2.5-flash-lite).
+
 - Details
 
   The `s explain` command is designed to provide comprehensive explanations for specific CLI commands, aiding users in understanding their usage and functionalities in-depth.
@@ -123,10 +136,10 @@ Get an explanation for a command.
   $ s explain "ls"
   ```
 
-  Get an explanation for the `git status` command:
+  Get an explanation using a specific model:
 
   ```bash
-  $ s explain "git status"
+  $ s explain -m gemini-2.5-flash-lite "git status"
   ```
 
 ## `revise` <Badge type="info" text="subcommand" />
@@ -143,6 +156,9 @@ Start a command revision.
   $ s r <command>
   ```
 
+- Options
+  - **-m, --model**: (optional) Gemini model to use (e.g., gemini-2.5-flash, gemini-2.5-flash-lite).
+
 - Details
 
   The `s revise` command is designed to start directly a revision for a command. This enables you to tailor the command to your specific needs before execution.
@@ -155,10 +171,10 @@ Start a command revision.
   $ s revise "ls"
   ```
 
-  Start a revision for the `git log` command:
+  Start a revision using a specific model:
 
   ```bash
-  $ s revise "git log"
+  $ s revise -m gemini-2.5-flash-lite "git log"
   ```
 
 ## `instruct` <Badge type="info" text="subcommand" />

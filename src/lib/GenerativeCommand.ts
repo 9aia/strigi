@@ -6,6 +6,7 @@ import chalk from "chalk"
 import c from "chalk-template"
 import ora, { type Ora } from "ora"
 import clipboardy from "clipboardy"
+import { Option } from "clipanion"
 import { config } from "../config"
 import { checkResponse, checkResponseStream } from "../services/checkResponse"
 import { explainCommandStream } from "../services/explainCommand"
@@ -22,6 +23,7 @@ interface RespondOptions {
 }
 
 abstract class GenerativeCommand extends StrigiCommand {
+  model = Option.String("-m, --model", { description: "Gemini model to use (e.g., gemini-2.5-flash, gemini-2.5-flash-lite)" })
   explanation: string | null = null
 
   async assertGeminiKey() {
@@ -61,7 +63,7 @@ abstract class GenerativeCommand extends StrigiCommand {
     const query = previousQuery || "[null]"
 
     this.tryAsync(async (spinner) => {
-      const result = await reviseCommandStream(query, cmd, revisePrompt, ci)
+      const result = await reviseCommandStream(query, cmd, revisePrompt, ci, this.model)
       spinner.stop()
       const revisedCmd = await this.writeStream(result.stream, chunk => chalk.cyan(chunk))
       await checkResponse(await result.response)
@@ -78,7 +80,7 @@ abstract class GenerativeCommand extends StrigiCommand {
     const query = previousQuery || "[null]"
 
     await this.tryAsync(async (spinner) => {
-      const result = await explainCommandStream(cmd, config.customInstructions)
+      const result = await explainCommandStream(cmd, config.customInstructions, this.model)
       spinner.stop()
 
       this.explanation = ""
