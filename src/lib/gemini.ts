@@ -14,7 +14,7 @@ export function getGemini(systemInstruction?: string, modelName?: string) {
   }
 
   const model = genAI.getGenerativeModel({
-    model: modelName || DEFAULT_CONFIG.model!,
+    model: modelName || config.model || DEFAULT_CONFIG.model!,
     systemInstruction,
   })
 
