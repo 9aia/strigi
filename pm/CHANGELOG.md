@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.5.0] - 2025-09-27
+
 ### Added
 
 - Added a new `config` command to display current settings, including API key status, selected model, custom instructions, and configuration file location
