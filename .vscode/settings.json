@@ -4,7 +4,7 @@
   "explorer.fileNesting.patterns": {
     "package.json": "bun.lockb, .gitignore, tsconfig.json, *.d.ts, .release-it.json, eslint.config.*",
     "README.md": "README.*, CHANGELOG*, LICENSE, CONTRIBUTING*",
-    ".env": ".env.*"
+    ".env.example": ".env*"
   },
   "editor.tabSize": 2,
   "typescript.tsdk": "node_modules/typescript/lib",

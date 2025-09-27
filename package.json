@@ -40,6 +40,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "release": "release-it",
+    "changelog": "tarsi",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
@@ -66,6 +67,7 @@
     "eslint": "^8.57.0",
     "gh-pages": "^6.1.1",
     "release-it": "^17.1.1",
+    "tarsi": "^0.1.0",
     "vitepress": "^1.1.0"
   }
 }

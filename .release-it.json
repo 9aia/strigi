@@ -2,7 +2,7 @@
   "git": {
     "commitMessage": "chore: release v${version}",
     "tagAnnotation": "Release v${version}",
-    "tagName": "v@${version}"
+    "tagName": "v${version}"
   },
   "github": {
     "draft": true,
