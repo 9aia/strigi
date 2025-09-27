@@ -49,6 +49,9 @@ This page not only lists all the dependencies used in Strigi, both for developme
 - release-it (^17.1.1)
   - License: MIT
   - Repository: https://github.com/release-it/release-it
+- tarsi (^0.1.0)
+  - License: MIT
+  - Repository: https://github.com/9aia/tarsi
 - vitepress (^1.1.0)
   - License: MIT
   - Repository: https://github.com/vuejs/vitepress
