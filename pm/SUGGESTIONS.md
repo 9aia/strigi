@@ -1,3 +1,0 @@
-# Suggestions
-
-- Rewrite with golang
