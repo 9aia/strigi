@@ -8,6 +8,7 @@
 
 - T-007 Add the ability to generate and execute a multi-step plan from a single prompt · created:2026-10-29
 - T-008 Read GEMINI\_API\_KEY from .env and · created:2026-10-29
+  - T-027 Add option to pass the env file
 - T-009 Add option to pass the env file · created:2026-10-29
 - T-010 Add revise and explain after errors · created:2026-10-29
 - T-011 Add command highlighting · created:2026-10-29
