@@ -18,6 +18,7 @@ export default defineConfig({
           { text: "Contributing Guide", link: "https://github.com/9aia/strigi/blob/main/CONTRIBUTING.md" },
         ],
       },
+      { text: "9aia", link: "https://9aia.com" },
     ],
     sidebar: [
       {
