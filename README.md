@@ -1,5 +1,9 @@
 # Strigi - CLI Command Assistant
 
+> [!WARNING]
+> **Archived** — Strigi is no longer maintained. `strigi@0.5.0` on npm is
+> the last published release; the docs site remains online for reference.
+
 > [!TIP]
 > In a hurry to get started? Jump right to the [Installation](https://9aia.github.io/strigi/guide/installation.html#package-manager) to set up Strigi on your system.
 
