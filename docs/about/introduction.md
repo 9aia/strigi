@@ -8,7 +8,7 @@ In a hurry to get started? Jump right to the [Installation](../guide/installatio
 
 Strigi is a free and open-source AI assistant that works within your command line. It helps you with various command-related tasks, like generating commands based on your instructions and explaining existing ones in a clear way.
 
-:::warning ⚗️ Experimental
+:::warning Experimental
 
 Strigi is under development and utilizes experimental AI technology. While it strives to provide accurate and helpful assistance, its responses may not always be perfect.
 
