@@ -1,0 +1,6 @@
+# strigi — docs/reference generation contract for `cypera`
+# TODO: declare generators as they come online —
+# [crate_map] layers + [[crate_map.splices]], [cli], [config].
+# Schema lives in ../cypera crates/cypera-core/src/repo_config.rs.
+# Until then `docs/package.json`'s docs:check has nothing to
+# verify — keep it failing loudly rather than vacuously green.
